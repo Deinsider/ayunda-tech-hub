@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYUNDA TECH HUB | Enterprise Engineering & Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --royal-blue: #1e3a8a;
+            --sky-blue: #0ea5e9;
+            --slate-900: #0f172a;
+            --slate-100: #f1f5f9;
+            --white: #ffffff;
+            --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { color: var(--slate-900); background: var(--white); overflow-x: hidden; }
+        
+        /* Utility Classes */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 100px 0; }
+        .text-blue { color: var(--sky-blue); }
+        .bg-dark { background: var(--slate-900); color: var(--white); }
+
+        /* Navigation */
+        nav {
+            height: 80px; display: flex; align-items: center; background: var(--white);
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .nav-content { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.6rem; font-weight: 900; letter-spacing: -1px; color: var(--royal-blue); text-decoration: none; }
+        .nav-links a { text-decoration: none; color: var(--slate-900); margin-left: 30px; font-weight: 600; font-size: 0.95rem; }
+
+        /* Hero */
+        .hero { padding: 140px 0 100px; background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%); position: relative; }
+        .hero h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 25px; color: var(--slate-900); }
+        .hero p { font-size: 1.4rem; color: #475569; max-width: 750px; margin-bottom: 40px; }
+
+        /* Stats Dashboard */
+        .stats-strip { display: flex; gap: 30px; margin-top: 60px; }
+        .stat-card { background: var(--white); padding: 20px 40px; border-radius: 12px; box-shadow: var(--shadow); }
+        .stat-card h2 { font-size: 2.5rem; color: var(--royal-blue); }
+
+        /* Expertise Grid */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .service-box { padding: 40px; border: 1px solid #e2e8f0; border-radius: 16px; transition: 0.3s; position: relative; overflow: hidden; }
+        .service-box:hover { border-color: var(--sky-blue); transform: translateY(-5px); box-shadow: var(--shadow); }
+        .service-box i { font-size: 2.5rem; margin-bottom: 20px; color: var(--sky-blue); }
+        .service-box ul { list-style: none; margin-top: 20px; color: #64748b; font-size: 0.95rem; }
+        .service-box li { margin-bottom: 8px; }
+
+        /* The Academy Curriculum */
+        .curriculum-section { background: var(--slate-100); border-radius: 30px; padding: 60px; margin: 50px 0; }
+        .curriculum-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+        /* Newsletter */
+        .newsletter { background: var(--royal-blue); padding: 80px 0; color: white; border-radius: 20px; text-align: center; }
+        .news-input { padding: 15px 30px; width: 350px; border-radius: 30px; border: none; outline: none; }
+        .btn-news { padding: 15px 40px; border-radius: 30px; border: none; background: var(--sky-blue); color: white; font-weight: bold; cursor: pointer; }
+
+        /* Footer */
+        footer { background: var(--slate-900); color: #94a3b8; padding: 100px 0 50px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 60px; }
+        .footer-logo { color: white; font-size: 1.5rem; margin-bottom: 20px; display: block; }
+        .footer-links a { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 12px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .stats-strip { flex-direction: column; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .curriculum-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">AYUNDA.</a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#academy">Academy</a>
+                <a href="#founder">Founder</a>
+                <a href="tel:0796943289" style="background: var(--royal-blue); color: white; padding: 10px 20px; border-radius: 5px;">0796943289</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <p class="text-blue" style="font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">Engineering Excellence</p>
+            <h1>Where Data Meets <br><span>Human Creativity.</span></h1>
+            <p>AYUNDA TECH HUB is a premier software laboratory specializing in high-load systems, intuitive UI/UX, and professional developer training.</p>
+            
+            <div class="stats-strip">
+                <div class="stat-card"><h2>150+</h2><p>Projects Delivered</p></div>
+                <div class="stat-card"><h2>12</h2><p>Expert Mentors</p></div>
+                <div class="stat-card"><h2>99.9%</h2><p>Service Uptime</p></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 50px;">Our Enterprise Expertise</h2>
+            <div class="services-grid">
+                <div class="service-box">
+                    <i class="fas fa-code-branch"></i>
+                    <h3>Full-Stack Systems</h3>
+                    <p>Building resilient backends and interactive frontends.</p>
+                    <ul>
+                        <li><i class="fas fa-check text-blue"></i> Scalable Microservices</li>
+                        <li><i class="fas fa-check text-blue"></i> Real-time Database Sync</li>
+                        <li><i class="fas fa-check text-blue"></i> API Security Protocols</li>
+                    </ul>
+                </div>
+                <div class="service-box">
+                    <i class="fas fa-brain"></i>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Integrating machine learning to automate your business.</p>
+                    <ul>
+                        <li><i class="fas fa-check text-blue"></i> Natural Language Processing</li>
+                        <li><i class="fas fa-check text-blue"></i> Predictive Data Models</li>
+                        <li><i class="fas fa-check text-blue"></i> Automated Chatbots</li>
+                    </ul>
+                </div>
+                <div class="service-box">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Ecosystems</h3>
+                    <p>Native-performance apps for iOS and Android.</p>
+                    <ul>
+                        <li><i class="fas fa-check text-blue"></i> Cross-Platform Efficiency</li>
+                        <li><i class="fas fa-check text-blue"></i> Offline-First Architecture</li>
+                        <li><i class="fas fa-check text-blue"></i> Push Notification Engines</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="academy" class="section-padding bg-dark" style="border-radius: 50px 50px 0 0;">
+        <div class="container">
+            <div class="curriculum-section" style="color: var(--slate-900);">
+                <div class="curriculum-grid">
+                    <div>
+                        <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Ayunda Academy Curriculum</h2>
+                        <p>Under the direct mentorship of <strong>Collins Wawire</strong>, we transform beginners into architects. Our 6-month intensive program covers:</p>
+                        <ul style="margin-top: 20px; line-height: 2;">
+                            <li><strong>Month 1-2:</strong> Advanced Frontend (React, Vue, GSAP)</li>
+                            <li><strong>Month 3-4:</strong> Backend Mastery (Node.js, PostgreSQL, Docker)</li>
+                            <li><strong>Month 5-6:</strong> System Design & Deployment (AWS, CI/CD)</li>
+                        </ul>
+                    </div>
+                    <div style="background: var(--white); padding: 30px; border-radius: 20px;">
+                        <h3>Founder's Spotlight</h3>
+                        <p style="margin: 15px 0;"><strong>Collins Wawire</strong> has been a pioneer in the regional tech space, advocating for clean code and local innovation. His hands-on approach ensures every student at the Hub is job-ready.</p>
+                        <a href="tel:0796943289" style="color: var(--royal-blue); font-weight: 800; text-decoration: none;">Speak to Collins Directly →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <h2 style="margin-bottom: 20px;">Stay Updated with Ayunda Hub</h2>
+                <p style="margin-bottom: 30px; opacity: 0.8;">Get weekly coding tips and project updates in your inbox.</p>
+                <form onsubmit="return false;">
+                    <input type="email" placeholder="Enter your email address" class="news-input">
+                    <button class="btn-news">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <strong class="footer-logo">AYUNDA TECH HUB</strong>
+                    <p>A global software agency and academy headquartered in Nairobi, dedicated to pushing the boundaries of what's possible in tech.</p>
+                </div>
+                <div class="footer-links">
+                    <p style="color: white; margin-bottom: 20px;"><strong>Solutions</strong></p>
+                    <a href="#">Web Development</a>
+                    <a href="#">Mobile Apps</a>
+                    <a href="#">Cloud Migration</a>
+                    <a href="#">UI/UX Design</a>
+                </div>
+                <div class="footer-links">
+                    <p style="color: white; margin-bottom: 20px;"><strong>Community</strong></p>
+                    <a href="#">Student Forum</a>
+                    <a href="#">GitHub Repo</a>
+                    <a href="#">Free Workshops</a>
+                    <a href="#">Job Board</a>
+                </div>
+                <div class="footer-links">
+                    <p style="color: white; margin-bottom: 20px;"><strong>Support</strong></p>
+                    <a href="tel:0796943289">Call Collins: +254796943289</a>
+                    <a href="#">Help Center</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+            <div style="text-align: center; border-top: 1px solid #1e293b; padding-top: 30px;">
+                <p>&copy; 2026 AYUNDA TECH HUB. Designed, Developed, and Maintained by mr offline.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
